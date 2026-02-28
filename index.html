@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Learning Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>🌟 Number Learning Game 🌟</h1>
+
+  <div class="mode-buttons">
+    <button id="individualModeBtn">👤 Individual Mode</button>
+    <button id="classroomModeBtn">🏫 Classroom Mode</button>
+  </div>
+
+  <!-- Individual Setup -->
+  <div id="individualSetup" style="display:none;">
+    <input type="text" id="playerName" placeholder="Enter your name">
+    <input type="number" id="maxNumber" placeholder="Enter max number to learn">
+    <button id="startIndividualBtn">Start Learning</button>
+  </div>
+
+  <!-- Classroom Setup -->
+  <div id="classroomSetup" style="display:none;">
+    <input type="text" id="classStudentName" placeholder="Enter student name">
+    <input type="number" id="classMaxNumber" placeholder="Enter max number to learn">
+    <button id="startLearningClassBtn">Start Learning</button>
+  </div>
+
+  <!-- Game Box -->
+  <div id="gameBox" style="display:none;">
+    <div id="number">1</div>
+    <div class="buttons">
+      <button id="prevBtn">⬅ Previous</button>
+      <button id="nextBtn">Next ➡</button>
+      <button id="reverseBtn">⬅ Reverse</button>
+      <button id="quizBtn">🧠 Quiz Mode</button>
+    </div>
+
+    <div id="quizBox">
+      <div id="quizSetup"></div>
+      <div id="quizControls" style="display:none;">
+        <h3 id="question"></h3>
+        <input type="number" id="answer" placeholder="Enter your answer">
+        <div>
+          <button id="submitAnswerBtn">Submit</button>
+          <button id="listenBtn">🔊 Listen Again</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="score">Score: 0</div>
+    <div id="appreciation"></div>
+  </div>
+
+  <!-- Results -->
+  <div id="resultsTable">
+    <h2>🏆 Results 🏆</h2>
+    <table>
+      <thead>
+        <tr><th>Student Name</th><th>Score</th></tr>
+      </thead>
+      <tbody id="resultsBody"></tbody>
+    </table>
+    <h3 id="topStudents"></h3>
+    <button id="restartBtn">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
